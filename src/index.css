@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Modern Task Management App Design System */
+
+@layer base {
+  :root {
+    /* Core Colors - Modern blue palette */
+    --background: 220 20% 97%;
+    --foreground: 220 15% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+
+    /* Primary - Modern blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 217 91% 55%;
+
+    /* Secondary - Soft purple */
+    --secondary: 270 40% 96%;
+    --secondary-foreground: 270 15% 25%;
+
+    /* Accent - Vibrant purple */
+    --accent: 270 95% 75%;
+    --accent-foreground: 270 15% 15%;
+
+    /* Success - Green */
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Orange */
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Destructive - Red */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 91% 60%;
+
+    /* Custom design tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 60%), hsl(270 95% 75%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 20% 98%));
+    --shadow-soft: 0 2px 8px hsl(220 15% 15% / 0.08);
+    --shadow-medium: 0 4px 16px hsl(220 15% 15% / 0.12);
+    --shadow-strong: 0 8px 32px hsl(220 15% 15% / 0.16);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark theme colors */
+    --background: 220 25% 8%;
+    --foreground: 220 15% 90%;
+
+    --card: 220 20% 12%;
+    --card-foreground: 220 15% 90%;
+
+    --popover: 220 20% 12%;
+    --popover-foreground: 220 15% 90%;
+
+    /* Primary - Bright blue in dark */
+    --primary: 217 91% 65%;
+    --primary-foreground: 220 25% 8%;
+    --primary-hover: 217 91% 70%;
+
+    /* Secondary - Dark purple */
+    --secondary: 270 15% 15%;
+    --secondary-foreground: 220 15% 85%;
+
+    /* Accent - Bright purple */
+    --accent: 270 95% 80%;
+    --accent-foreground: 220 25% 8%;
+
+    /* Success - Bright green */
+    --success: 142 76% 45%;
+    --success-foreground: 220 25% 8%;
+
+    /* Warning - Bright orange */
+    --warning: 38 92% 60%;
+    --warning-foreground: 220 25% 8%;
+
+    /* Destructive - Bright red */
+    --destructive: 0 84% 65%;
+    --destructive-foreground: 220 25% 8%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 18%;
+    --ring: 217 91% 65%;
+
+    /* Dark theme custom tokens */
+    --gradient-primary: linear-gradient(135deg, hsl(217 91% 65%), hsl(270 95% 80%));
+    --gradient-card: linear-gradient(145deg, hsl(220 20% 12%), hsl(220 15% 15%));
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 32px hsl(0 0% 0% / 0.5);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 1;
+  }
+}
